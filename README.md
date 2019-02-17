@@ -38,10 +38,10 @@ Although you don't need the latest computer equipment for this, you also can't u
 
 ## Parts List
 
-|Part|Description|Price|Link|
-|:-----------|:---------------------------|:-----|
-|L-001A|Yosuda Spin Bike|$250|https://www.amazon.com/dp/B07D528W98/ref=emc_b_5_t|
-|RaspBerry Pi 3 W|Raspberry Pi|https://www.amazon.com/CanaKit-Raspberry-Power-Supply-Listed/dp/B07BC6WH7V/ref=sr_1_6?keywords=Raspberry+Pi+3+b%2B&qid=1550445668&s=gateway&sr=8-6|
+|Part             |Description                 |Price |Link                                              |
+|:-----------     |:---------------------------|:-----|:-------------------------------------------------|
+|L-001A           |Yosuda Spin Bike            |$250  |https://www.amazon.com/dp/B07D528W98/ref=emc_b_5_t|
+|RaspBerry Pi 3 B+|Raspberry Pi|https://www.amazon.com/CanaKit-Raspberry-Power-Supply-Listed/dp/B07BC6WH7V/ref=sr_1_6?keywords=Raspberry+Pi+3+b%2B&qid=1550445668&s=gateway&sr=8-6|
 |KY-003 Hall Sensor|Hall Sensor with controller board|$3|https://www.amazon.com/SODIAL-magnetic-sensor-module-Arduino/dp/B077RSV94Z/ref=sr_1_12?keywords=KY-003&qid=1550445829&s=industrial&sr=1-12|
 |Flex Coupling|For connecting stepper motor to resistance shaft|$8|https://www.amazon.com/gp/product/B01HBPHSII/ref=ppx_yo_dt_b_asin_title_o07__o00_s00?ie=UTF8&psc=1|
 |17HS13-0404S1|Nema 17 stepper motor|$11|https://www.amazon.com/gp/product/B00PNEQ9T4/ref=ppx_yo_dt_b_asin_title_o02__o00_s00?ie=UTF8&psc=1|
