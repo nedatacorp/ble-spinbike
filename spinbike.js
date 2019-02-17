@@ -3,7 +3,7 @@ var CRANKSPEED = require('./crankspeed');
 var hx711 = require('./hx711.js')
 var sleep = require('sleep');
 
-const forceoffset = 102.7371 - .6367;  //Offset to zero the scale
+const forceoffset = 102.7371 - .6367;  //Offset to zero the force sensor
 
 //Values that need to be set depending on  spin bike characteristics
 const bikename = "Yosuda";      //Name of machine that will show up in the spinbike app
@@ -44,7 +44,7 @@ function crankpulse() {
 // sends information, such as the current grade.
 function bluetoothevent(grade)
 {
-  console.log("GRADE: " + grade.toString());
+  console.log("Grade: " + grade.toString());
 }
 
 //Get a reading and start the force sensing function
@@ -70,7 +70,7 @@ var main = function() {
   
   wheel_rev_count = Math.floor(stroke_count * wheelToCrankRatio);
   
-  console.log("Sending watts: " + watts.toString() + ", rev_count: " + stroke_count.toString() + ", wheel_rev_count: " + wheel_rev_count.toString()); 
+ // console.log("Sending watts: " + watts.toString() + ", rev_count: " + stroke_count.toString() + ", wheel_rev_count: " + wheel_rev_count.toString()); 
   peripheral.notify({'watts': watts, 'rev_count': stroke_count, 'wheel_rev_count': wheel_rev_count});
 
   setTimeout(main, 1000);

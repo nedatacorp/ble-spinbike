@@ -1,4 +1,4 @@
-var util = require('util');
+Clvar util = require('util');
 var os = require('os');
 var exec = require('child_process').exec;
 

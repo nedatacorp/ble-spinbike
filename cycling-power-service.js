@@ -9,7 +9,7 @@ var CyclingSensorLocationCharacteristic = require('./cycling-sensor-location-cha
 var WriteDataCharacteristic = require('./writeData');
 
 // https://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.cycling_power.xml
-function CyclingPowerService() {
+function CyclingPowerService(callback) {
   this.pm = new CyclingPowerMeasurementCharacteristic();
   var self = this;
   CyclingPowerService.super_.call(this, {
@@ -18,7 +18,7 @@ function CyclingPowerService() {
           this.pm,
           new CylingPowerFeatureCharacteristic(),
           new CyclingSensorLocationCharacteristic(),
-          new WriteDataCharacteristic()         
+          new WriteDataCharacteristic(callback)         
       ]
   });
   this.notify = function(event) {

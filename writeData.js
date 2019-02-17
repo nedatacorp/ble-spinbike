@@ -5,13 +5,13 @@ var util = require('util');
 
 var BlenoCharacteristic = bleno.Characteristic;
 
-var writeDataCharacteristic = function() {
+var writeDataCharacteristic = function(callback) {
  writeDataCharacteristic.super_.call(this, {
     uuid: '2AD9',
     properties: ['write', 'indicate'],
   });
 
-
+ this._clientcallback = callback;
  this._value = new Buffer(0);
 };
 
@@ -27,7 +27,7 @@ writeDataCharacteristic.prototype.onWriteRequest = function(data, offset, withou
   {
 	  d = d + data[ix].toString() + ' ';
   }
-  console.log(' WriteDataCharacteristic opcode: ' + opcode.toString() + d);
+  //console.log(' WriteDataCharacteristic opcode: ' + opcode.toString() + d);
   
   //If opcode 0x00, this is a request for control. 
   if (opcode === 0)
@@ -52,13 +52,13 @@ writeDataCharacteristic.prototype.onWriteRequest = function(data, offset, withou
       var og = grade;
       if (grade>500)
       {
-	grade = 655 - grade;
+	       grade = 655 - grade;
       }
       grade = grade * 2;
-      //  console.log('Windspeed: ' + windSpeed.toString());
-	    console.log('Grade: ' + og.toString() + " corrected: " + grade.toString());
-      //  console.log('Coefficient of rolling resistance: ' + crr.toString());
-      //  console.log('Coefficient of wind resistance: ' + cw.toString());
+      console.log('Windspeed: ' + windSpeed.toString());
+      console.log('Grade: ' + og.toString() + " corrected: " + grade.toString());
+      console.log('Coefficient of rolling resistance: ' + crr.toString());
+      console.log('Coefficient of wind resistance: ' + cw.toString());
 	
 
       if (this.updateValueCallback) {
@@ -67,7 +67,12 @@ writeDataCharacteristic.prototype.onWriteRequest = function(data, offset, withou
         data.writeUInt8(0x11, 1);
         data.writeUInt8(0x01, 2);
         this.updateValueCallback(data);
-      }	  	  
+      }	 
+      
+      if (this._clientcallback)
+      {
+        this._clientcallback(grade);
+      } 	  
   }
   if (opcode === 7)
   {
@@ -92,8 +97,6 @@ writeDataCharacteristic.prototype.onWriteRequest = function(data, offset, withou
   callback(this.RESULT_SUCCESS);
 
 };
-
-
 
 util.inherits(writeDataCharacteristic, BlenoCharacteristic);
 module.exports = writeDataCharacteristic;

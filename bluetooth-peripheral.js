@@ -3,7 +3,7 @@ var BluetoothPeripheral = function(name, callback) {
   var CyclingPowerService = require('./cycling-power-service');
   var debug = require('debug')('ble');
   process.env['BLENO_DEVICE_NAME'] = name;
-  this.primaryService = new CyclingPowerService();
+  this.primaryService = new CyclingPowerService(callback);
   this.last_timestamp = 0;
   this.rev_count = 0;
   this.wheel_rev_count = 0;
@@ -30,7 +30,9 @@ var BluetoothPeripheral = function(name, callback) {
     }
   });
 
+  //This is called by the main spinbike.js script when data needs to be sent to the client
   this.notify = function(event) {
+    //console.log("in notifier, event: " + JSON.stringify(event));
     self.primaryService.notify(event);
     if (!('watts' in event) && !('heart_rate' in event) && !('wheel_rev_count' in event)) {
       debug("unrecognized event: %j", event);

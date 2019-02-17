@@ -44,11 +44,15 @@ CyclingPowerMeasurementCharacteristic.prototype.onUnsubscribe = function() {
   this._updateValueCallback = null;
 };
 
+
+//This function is called by our logic whenever there is data to send to the client
 CyclingPowerMeasurementCharacteristic.prototype.notify = function(event) {
   if (!('watts' in event) && !('rev_count' in event) && !('wheel_rev_count' in event))  {
     // ignore events with no power and no crank data
     return;
   }
+  
+  //This how we tell the client what data we are sending it
   var buffer = new Buffer(14);
   // flags
   // 00000001 - 1   - 0x001 - Pedal Power Balance Present
@@ -62,6 +66,8 @@ CyclingPowerMeasurementCharacteristic.prototype.notify = function(event) {
   //buffer.writeUInt16LE(0x020, 0);
   buffer.writeUInt16LE(0x030, 0);
 
+  //Store the values into the outgoing data buffer
+  
   if ('watts' in event) {
     var watts = event.watts;
    // console.log("power: " + watts.toString(16));
@@ -70,7 +76,8 @@ CyclingPowerMeasurementCharacteristic.prototype.notify = function(event) {
 
   if ('wheel_rev_count' in event) {
    // console.log("wheel_rev_count: " + event.wheel_rev_count.toString(16));
-    buffer.writeUInt32LE(event.wheel_rev_count, 4);
+    buffer.writeUInt32LE(event.whe
+el_rev_count, 4);
 
     var now = Date.now();
     var now_1024 = Math.floor(now*1e3/2048);
@@ -92,6 +99,7 @@ CyclingPowerMeasurementCharacteristic.prototype.notify = function(event) {
     buffer.writeUInt16LE(event_time, 12);
   }
 
+  // Send the data to the client
   if (this._updateValueCallback) {
     this._updateValueCallback(buffer);
   }
