@@ -3,7 +3,7 @@ This project is about building a "smart" spinbike from a low-cost, standard spin
 
 Spinbike is a Javascript node.js application that runs on a Raspberry Pi 3 B+. It gathers data from sensors attached to a spinbike and feeds the data over a bluetooth LE connection to client applications, using the Bluetooth LE (Low Energy) GATT protocol. The GATT protocol is recognized by all major online virtual exercise platforms.
 
-This project provides three of the main exercise bike services: Cadence/Speed, Power and Control. Online apps generally require at least Cadence/Speed or Power in order to allow you to connect and participate. Control is optional, and generally involves feeding the bike information about wind speed road resistance and grade so it can adjust the effort required by the rider. You can build as much or as little as you want. 
+This project provides three of the main exercise bike services: Cadence/Speed, Power and Control. Online apps generally require at least Cadence/Speed or Power in order to allow you to connect and participate. Control is optional, and generally involves feeding the bike information about wind speed, road resistance and grade so it can adjust the effort required by the rider. You can build as much or as little as you want. 
 
 Here is the fritzing diagram for the Raspberry PI, sensors and controllers:
 
@@ -50,6 +50,8 @@ Although you don't need the latest computer equipment for this, you also can't u
 |Hx711|Load Cell|$13|https://www.amazon.com/gp/product/B075317R45/ref=ppx_yo_dt_b_asin_title_o05__o00_s00?ie=UTF8&psc=1|
 |28 awg 3-conductor wire|3 conductor with ground|$12|https://www.amazon.com/b/ref=vas_ilm_ddiypc19hn?node=10192825011&pf_rd_p=3e2ddc26-875a-4860-aff6-b78e7c7994ec&pf_rd_s=detail-ilm&pf_rd_t=201&pf_rd_i=B0711Y7QZ4&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=FNMTM8V6GT0HRZK91XFX&pf_rd_r=FNMTM8V6GT0HRZK91XFX&pf_rd_p=3e2ddc26-875a-4860-aff6-b78e7c7994ec|
 |12 v power supply|For powering stepper motor|$8|https://www.amazon.com/inShareplus-Mounted-Switching-Connector-Adapter/dp/B01GD4ZQRS/ref=sr_1_1?keywords=12+volt+power+supply&qid=1550446643&s=local-services&sr=8-1|
+|Buttons|Pushbuttons for controlling resistance|$7|https://www.amazon.com/yueton-Momentary-Button-Switch-Toggle/dp/B0119FH5Z2/ref=sr_1_13?keywords=Pushbutton+switch+momentary&qid=1550448548&s=gateway&sr=8-13|
+|Resistor|You only need 1. You probably have some lying around.|$6|https://www.amazon.com/Projects-10EP5122K20-2-2k-Resistors-Pack/dp/B0185FKB2S/ref=sr_1_15?keywords=resistor&qid=1550448604&s=gateway&sr=8-15|
 
 Also:
 * Friction tape (works better than plastic electrical tape)
