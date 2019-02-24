@@ -109,7 +109,7 @@ Each device has a JavaScript test script in the Tests folder as well as a Python
 
 ### The Load Cell
 
-Mount one end of the load cell to piece of plywood next to the Pi, using nuts or washers for stand-offs. You need to have some space between the remainder of the load cell and the pywood so you can flex the load cell.
+Mount one end of the load cell to a piece of plywood next to the Pi, using nuts or washers for stand-offs. You need to have some space between the remainder of the load cell and the pywood so you can flex the load cell.
 
 Connect the load cell to the load cell controller, and the load cell controller to the Pi using the Fritzing diagram.
 
