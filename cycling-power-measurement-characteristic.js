@@ -76,8 +76,7 @@ CyclingPowerMeasurementCharacteristic.prototype.notify = function(event) {
 
   if ('wheel_rev_count' in event) {
    // console.log("wheel_rev_count: " + event.wheel_rev_count.toString(16));
-    buffer.writeUInt32LE(event.whe
-el_rev_count, 4);
+    buffer.writeUInt32LE(event.wheel_rev_count, 4);
 
     var now = Date.now();
     var now_1024 = Math.floor(now*1e3/2048);

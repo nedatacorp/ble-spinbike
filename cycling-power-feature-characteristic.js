@@ -1,4 +1,4 @@
-Clvar util = require('util');
+var util = require('util');
 var os = require('os');
 var exec = require('child_process').exec;
 
@@ -26,6 +26,8 @@ CyclingPowerFeatureCharacteristic.prototype.onReadRequest = function(offset, cal
   // 0010 - 0x02 - torque
   // 0100 - 0x04 - wheel revolutions
   // 1000 - 0x08 - crank revolutions
+  
+  console.log("Read request for features");
   var value = new Buffer(4);
   value.writeUInt32LE(0x0C); //We support wheel revolutions and crank revolutions
   
