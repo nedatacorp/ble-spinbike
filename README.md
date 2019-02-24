@@ -136,12 +136,22 @@ Connect a 12v, 2 amp DC power supply to the stepper motor controller and plug it
 
 From a terminal window, cd to the Desktop/ble-spinbike/Tests folder.
 
-Enter: sudo node steppertest.py
+Enter: sudo node steppertest.js
 
 The stepper motor should run 360 degrees clockwise and then 360 degrees counter-clockwise.
 
 
+### Shift Buttons   
 
+These are used for adjusting the tension on the wool brake pad that presses on the flywheel to increase or decrease the power you have to apply to the spinbike. They run the stepper motor forward or backward. You will want to mount these buttons in a small case and attach them to the handlebars or some other place that is convenient to reach while cycling. 
+
+Refer to the Fritzing diagram to wire the buttons. 
+
+From a terminal window, cd to the Desktop/ble-spinbike/Tests folder.
+
+Enter: sudo node buttontest.js
+
+Press and release each of the buttons. You should see a message on the screen indicating that you've pressed each button.
 
 
 
