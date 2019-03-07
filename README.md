@@ -153,5 +153,32 @@ Enter: sudo node buttontest.js
 
 Press and release each of the buttons. You should see a message on the screen indicating that you've pressed each button.
 
+## Install hardware on the spinbike
+
+### The Power Sensor
+
+The power sensor is the load-cell. We attach it behind the steering post using two 1/4" nuts as stand-offs. A long 4mm screw with a stop nut on it is installed and adjusted to just touch the front of the plastic brake shoe.
+
+Here is a picture that shows the two large holes drilled into the front of the steering post. The holes need to be large enough for the heads of the two 5mm bolts to pass through:
+
+![](images/IMG-3076.jpg)
+
+Here is a view from the right side of the bike, showing the load-cell mounted on the steering post:
+
+![](images/IMG-3074.jpg)
+
+You should also make sure the brake shoe is loose in the metal bracket so it has some freedom to press against the load-cell screw. I remove the rear screw from the brake shoe and filed the holes for the front screw oblong, so the show can float forward and back just a bit.
+
+### The Resistance Adjuster
+
+The stepper motor is use to adjust the resistance on the flywheel. It replaces the manual adjustment knob and provides a way to programatically adjust the resistance. 
+
+First, use a hacksaw to cut the knob off the top of the adjustment shaft (you can remove it from the bike to make that easier), then install the 5 x 8mm flex coupling:
+
+![](images/IMG-3078.jpg)
+
+The stepper motor is attached to the coupling and then two metal brackets are used in conjunction with the l-shaped stepper motor bracket to stabilize the stepper motor against the steering post. I used two 1/4" think pieces of rubber from a mouse pad between the brackets an the steering post to make everything line up:
+
+![](images/IMG-3079.jpg)
 
 
