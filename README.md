@@ -53,7 +53,7 @@ For situations where you don't have a tablet that has bluetooth LE capability, y
 |28 awg 3-conductor wire|3 conductor with ground|$12|https://www.amazon.com/StrivedayTM-3-core-Control-Shielded-Headphone/dp/B01LNH94Y6/ref=sr_1_1?ie=UTF8&qid=1550975991&sr=8-1&keywords=3-conductor+awg+28|
 |12 v power supply|For powering stepper motor|$8|https://www.amazon.com/inShareplus-Mounted-Switching-Connector-Adapter/dp/B01GD4ZQRS/ref=sr_1_1?keywords=12+volt+power+supply&qid=1550446643&s=local-services&sr=8-1|
 |Buttons|Pushbuttons for controlling resistance|$7|https://www.amazon.com/yueton-Momentary-Button-Switch-Toggle/dp/B0119FH5Z2/ref=sr_1_13?keywords=Pushbutton+switch+momentary&qid=1550448548&s=gateway&sr=8-13|
-|Resistor|You only need 1. You probably have some lying around.|$6|https://www.amazon.com/Projects-10EP5122K20-2-2k-Resistors-Pack/dp/B0185FKB2S/ref=sr_1_15?keywords=resistor&qid=1550448604&s=gateway&sr=8-15|
+|10k Resistor|You only need 1. You probably have some lying around.|$6|https://www.amazon.com/10k-Carbon-Film-Resistors-Pack/dp/B01NAVJIE1/ref=sr_1_9?crid=1MMX4IB1X72BT&keywords=10k+resistor+1%2F4+watt&qid=1552129783&s=gateway&sprefix=10k+resistor%2Caps%2C157&sr=8-9|
 
 Also:
 * Friction tape (works better than plastic electrical tape)
@@ -177,7 +177,7 @@ First, use a hacksaw to cut the knob off the top of the adjustment shaft (you ca
 
 ![](images/IMG-3078.png)
 
-The stepper motor is attached to the coupling and then two metal brackets are used in conjunction with the l-shaped stepper motor bracket to stabilize the stepper motor against the steering post. I used two 1/4" think pieces of rubber from a mouse pad between the brackets an the steering post to make everything line up:
+The stepper motor is attached to the coupling and then two metal brackets are used in conjunction with the l-shaped stepper motor bracket to stabilize the stepper motor against the steering post. I used two 1/4" thin pieces of rubber from a mouse pad between the brackets an the steering post to make everything line up:
 
 ![](images/IMG-3079.png)
 
